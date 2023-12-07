@@ -1,20 +1,29 @@
 {
-  "name": "my-turborepo",
+  "name": "my-nx",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
+    "build": "nx run-many -t build",
+    "dev": "nx run-many -t dev",
+    "lint": "nx run-many -t lint --exclude @repo/typescript-config,@repo/eslint-config",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@nx/eslint": "17.2.0-canary.20231207-b8d24e6",
+    "@nx/next": "17.2.0-canary.20231207-b8d24e6",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "nx": "17.2.0-canary.20231207-b8d24e6",
     "prettier": "^3.1.0",
-    "turbo": "^1.10.16"
+    "typescript": "~5.2.2"
   },
   "packageManager": "pnpm@8.9.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "next": "13.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tslib": "^2.3.0"
   }
 }

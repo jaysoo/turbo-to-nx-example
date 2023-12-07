@@ -1,0 +1,4 @@
+{
+  "$schema": "packages/nx/schemas/nx-schema.json",
+  "plugins": ["@nx/next/plugin", "@nx/eslint/plugin"]
+}

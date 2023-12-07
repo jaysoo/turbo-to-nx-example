@@ -15,8 +15,8 @@ node_modules
 # Testing
 coverage
 
-# Turbo
-.turbo
+# Nx
+.nx
 
 # Vercel
 .vercel
